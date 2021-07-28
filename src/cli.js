@@ -52,9 +52,9 @@ const fileInfo = fileSizes({
 
 let totalFileSize = 0;
 let totalFileSizeGzip = 0;
-
+let stream;
 if (program.verbose) {
-  const stream = process.stderr;
+  stream = process.stderr;
   stream.clearLine();
   stream.cursorTo(0);
   stream.write('Rendering...');
